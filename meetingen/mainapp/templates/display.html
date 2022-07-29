@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container p-4">
+        <div class="container-fluid">
+            <h2 class="display-6 text-center">Here are the meeting details</h2>
+            <p class="lead text-center">
+                Please find the details of your scheduled meeting below 
+            </p>
+            <div class="container p-4">
+                <div class="col-md-5 mx-auto border border-secondary p-3">
+                    <h3>Meeting Details</h3>
+                    <hr>
+                    <div class="col mt-3">
+                        <div class="col">
+                            <h6>Meeting Title</h6>
+                            <p class="form-control">{{meeting_data.subject}}</p>
+                        </div>
+                        <div class="col">
+                            <h6>Meeting Time</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Start Time</p>
+                                    <p class="form-control">{{meeting_data.startDateTime}}</p>
+                                </div>
+                                <div class="col">
+                                    <p>End Time</p>
+                                    <p class="form-control">{{meeting_data.endDateTime}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h6>Meeting Link</h6>
+                            <a href="{{meeting_data.joinUrl}}" class="btn btn-primary">Join Meeting via Teams</a>
+                            <a href="{{meeting_data.joinWebUrl}}" class="btn btn-primary">Join Meeting via Web</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

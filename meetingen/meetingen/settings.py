@@ -11,7 +11,16 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import os 
+import os
+# import configparser
+
+
+# # Loading Azure Settings 
+# config = configparser.ConfigParser()
+# config.read(['config.cfg', 'config.dev.cfg'])
+# azure_settings = config['azure']
+
+# graph: Graph = Graph(azure_settings) 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

@@ -1,6 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container p-2">
-        <h2>Index</h2>
+    <div class="container p-4">
+        <div class="container-fluid">
+            <h2 class="display-6 text-center">Microsoft Teams Meeting Link Generator</h2>
+            <p class="lead text-center">
+                This tool allows to instantly create Meeting Links using Microsoft's Graph API and OAuth
+            </p>
+            <div class="container p-4">
+                <div class="col-md-3 mx-auto border border-dark p-3">
+                        <h3>Login</h3>
+                        <hr>
+                        <p class="fw-bold">Please sign in to a Microsoft Account</p>
+                        <!-- <div class="col">
+                                <div class="col">
+                                    <p>Email</p>
+                                    <input class="form-control" type="email" name="email" placeholder="example@outlook.com">
+                                </div>
+                                <div class="col mt-2">
+                                    <p>Password</p>
+                                    <input class="form-control" type="password" name="password" placeholder="*********">
+                                </div>
+                                <div class="col mt-3">
+                                    <input class="btn btn-primary" type="submit" value="Sign In">
+                                    <input class="btn btn-warning" type="button" value="Sign Up">
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col p-4 border border-muted bg-light">
+                            {% load static %}
+                            <a type="button" href="{{url}}"><img src="{% static 'img/signin_dark.png' %}"/></a>
+                        </div>
+                        <hr>
+                        <div class="container mt-3">
+                            <div class="row">
+                                <p class="fw-bold">Note:</p>
+                            </div>
+                            <div class="row">
+                                <p class="fst-italic">Please use your work or school Microsoft Account to use this tool.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
